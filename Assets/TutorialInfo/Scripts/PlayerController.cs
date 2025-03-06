@@ -85,7 +85,6 @@ namespace Assets.Scripts.Player
         private void Jump()
         {
             _playerVelocity.y = Mathf.Sqrt(_jumpHeight * -2f * _gravity);
-            //_isGrounded = false;
         }
 
         private void IsGrounded()
