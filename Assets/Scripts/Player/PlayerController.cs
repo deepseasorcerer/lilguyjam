@@ -5,7 +5,6 @@ namespace Assets.Scripts.Player
 {
     public class PlayerController : MonoBehaviour
     {
-
         [Header("References")]
         [SerializeField] private Transform _cam;
         [SerializeField] private Transform _groundCheck;
@@ -22,6 +21,7 @@ namespace Assets.Scripts.Player
 
         private CharacterController _controller;
         private PlayerInput _input;
+        private WeaponController _weapon;
 
         private Vector2 _moveDirection;
         private Vector3 _playerVelocity;
@@ -34,6 +34,7 @@ namespace Assets.Scripts.Player
             _input = new PlayerInput();
             _input.Enable();
             _controller = GetComponent<CharacterController>();
+            _weapon = GetComponent<WeaponController>();
         }
 
         private void Start()
@@ -41,6 +42,7 @@ namespace Assets.Scripts.Player
             _input.Player.Move.performed += PlayerInput_Move;
             _input.Player.Move.canceled += PlayerInput_Move;
             _input.Player.Jump.performed += PlayerInput_Jump;
+            _input.Player.Attack.performed += PlayerInput_Attack;
         }
 
         private void PlayerInput_Move(InputAction.CallbackContext obj)
@@ -52,6 +54,11 @@ namespace Assets.Scripts.Player
         {
             if (_isGrounded)
                 Jump();
+        }
+
+        private void PlayerInput_Attack(InputAction.CallbackContext obj)
+        {
+            _weapon.Attack();
         }
 
         private void Update()
