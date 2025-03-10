@@ -6,7 +6,6 @@ namespace Assets.Scripts.Player
     public class PlayerController : MonoBehaviour
     {
         [Header("References")]
-        [SerializeField] private Transform _cam;
         [SerializeField] private Transform _groundCheck;
 
         [Header("Movement settings")]
@@ -22,6 +21,7 @@ namespace Assets.Scripts.Player
         private CharacterController _controller;
         private PlayerInput _input;
         private WeaponController _weapon;
+        private Camera _cam;
 
         private Vector2 _moveDirection;
         private Vector3 _playerVelocity;
@@ -39,6 +39,7 @@ namespace Assets.Scripts.Player
 
         private void Start()
         {
+            _cam = Camera.main;
             _input.Player.Move.performed += PlayerInput_Move;
             _input.Player.Move.canceled += PlayerInput_Move;
             _input.Player.Jump.performed += PlayerInput_Jump;
@@ -83,7 +84,7 @@ namespace Assets.Scripts.Player
 
         private void RotateCharacter(Vector3 direction)
         {
-            _targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _cam.eulerAngles.y;
+            _targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _cam.transform.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetAngle, ref _turnSmoothVelocity, _turnSmoothTime);
 
             transform.rotation = Quaternion.Euler(0f, angle, 0f);

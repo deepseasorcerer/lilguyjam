@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51036c0b0e034f44295b36b9a611b47e, type: 3}
-  m_Name: LightWeapon
+  m_Name: Spear
   m_EditorClassIdentifier: 
-  WeaponModel: {fileID: 8274899204876149367, guid: b42d92b866ee04b469f60705a455feb1, type: 3}
-  Damage: 5
-  AttackSpeed: 2
-  AttackRange: 2
-  AttackAngle: 45
-  RayCount: 25
+  WeaponModel: {fileID: 8274899204876149367, guid: cc6361c1c7f79854f9b98adeb909d912, type: 3}
+  Damage: 10
+  AttackSpeed: 0.8
+  AttackRange: 5
+  AttackAngle: 5
+  RayCount: 5
   AttackOffset: 0.5
