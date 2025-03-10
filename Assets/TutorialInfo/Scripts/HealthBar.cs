@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthBar : MonoBehaviour
 {
@@ -7,6 +8,11 @@ public class HealthBar : MonoBehaviour
     public Slider healthSlider;
     public Image fillImage;
     public Gradient healthGradient;
+    public TextMeshProUGUI currentHealthText;
+    public TextMeshProUGUI maxHealthText;
+
+    [Header ("Effects COMING SOON")]
+
 
     [Header("Player Health Settings")]
     public float maxHealth = 100f;
@@ -38,5 +44,7 @@ public class HealthBar : MonoBehaviour
     {
         healthSlider.value = currentHealth;
         fillImage.color = healthGradient.Evaluate(healthSlider.normalizedValue);
+        maxHealthText.text = $"/{maxHealth}";
+        currentHealthText.text = $"{currentHealth}";
     }
 }
