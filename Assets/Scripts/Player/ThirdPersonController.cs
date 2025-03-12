@@ -3,12 +3,14 @@ using UnityEngine;
 public class ThirdPersonController : MonoBehaviour
 {
     // Public variables for tweaking in the Inspector
-    public float speed = 5f;          // Movement speed
-    public float rotationSpeed = 10f; // Rotation smoothing speed
-    public float gravity = 9.81f;     // Gravity strength
+    public float speed = 5f;              // Normal movement speed
+    public float sprintMultiplier = 1.5f; // Multiplier for sprint speed
+    public float jumpSpeed = 5f;          // Speed at which the player jumps
+    public float rotationSpeed = 10f;     // Rotation smoothing speed
+    public float gravity = 9.81f;         // Gravity strength
 
     [Header("Assign the Camera Here")]
-    public Camera playerCamera;       // Drag your camera into this field in the Inspector
+    public Camera playerCamera;           // Drag your camera into this field in the Inspector
 
     private CharacterController characterController;
     private float verticalVelocity = 0f;
@@ -45,6 +47,12 @@ public class ThirdPersonController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
+        // Check if the sprint key is pressed (Left Shift)
+        bool isSprinting = Input.GetKey(KeyCode.LeftShift);
+
+        // Determine the effective speed based on whether sprinting or not
+        float effectiveSpeed = isSprinting ? speed * sprintMultiplier : speed;
+
         // Get the camera's forward and right vectors
         Vector3 camForward = playerCamera.transform.forward;
         Vector3 camRight = playerCamera.transform.right;
@@ -67,12 +75,21 @@ public class ThirdPersonController : MonoBehaviour
         }
 
         // Calculate horizontal velocity
-        Vector3 horizontalVelocity = moveDirection * speed;
+        Vector3 horizontalVelocity = moveDirection * effectiveSpeed;
+
+        // Handle jump input
+        if (Input.GetKeyDown(KeyCode.Space) && characterController.isGrounded)
+        {
+            verticalVelocity = jumpSpeed;
+        }
 
         // Apply gravity and keep character grounded
         if (characterController.isGrounded)
         {
-            verticalVelocity = -0.1f; // Small downward force to stay grounded
+            if (verticalVelocity < 0)
+            {
+                verticalVelocity = -0.1f; // Small downward force to stay grounded
+            }
         }
         else
         {
