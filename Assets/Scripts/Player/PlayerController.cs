@@ -79,7 +79,8 @@ namespace Assets.Scripts.Player
         private void MoveCharacter()
         {
             Vector3 moveDir = Quaternion.Euler(0f, _targetAngle, 0f) * Vector3.forward;
-            _controller.Move(moveDir.normalized * _walkSpeed * Time.deltaTime);
+            Vector3 move = moveDir.normalized * _walkSpeed;
+            _controller.Move((move + _playerVelocity) * Time.deltaTime);
         }
 
         private void RotateCharacter(Vector3 direction)
