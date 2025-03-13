@@ -21,8 +21,11 @@ public class PlayerMovementController : MonoBehaviour
 
     private CharacterController characterController;
 
+    private Animator animator;
+
     void Start()
     {
+        animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
     }
 
@@ -45,6 +48,8 @@ public class PlayerMovementController : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
+            animator.ResetTrigger("IsIdle");
+            animator.SetTrigger("IsWalking");
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref rotationSpeed, 0.1f);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
@@ -53,6 +58,12 @@ public class PlayerMovementController : MonoBehaviour
             float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
             characterController.Move(moveDirection.normalized * speed * Time.deltaTime);
         }
+        else
+        {
+            animator.ResetTrigger("IsWalking");
+            animator.SetTrigger("IsIdle");
+        }
+        
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
