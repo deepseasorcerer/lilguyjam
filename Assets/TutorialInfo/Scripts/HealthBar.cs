@@ -32,6 +32,7 @@ public class HealthBar : MonoBehaviour
         UpdateHealthBar();
     }
 
+/*------THEALTH BAR TESTER--------
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) // Press "1" to take damage
@@ -39,6 +40,7 @@ public class HealthBar : MonoBehaviour
            TakeDamage(10f); // Adjust damage amount as needed
         }
     }
+*/
 
     public void TakeDamage(float damage)
     {
