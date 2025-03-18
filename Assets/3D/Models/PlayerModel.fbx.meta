@@ -1,0 +1,312 @@
+fileFormatVersion: 2
+guid: 0e9245030c2d7064b91de5fa8da008eb
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: 25f602b9e0cdd304381f3d4251f1b0a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.007
+    second: {fileID: 2100000, guid: 3958925d2fcb83f45bed21bd3cfbcdd5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: a6c81dc30bbee9441adaad98f158ba46, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Belly
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Arm.L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Arm.R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand.L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand.R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand.L_end
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand.R_end
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head_end
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: hedgehog(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HedgeHog
+      parentName: hedgehog(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Hips
+      parentName: HedgeHog
+      position: {x: 0, y: -0.00063592254, z: 0.014280655}
+      rotation: {x: -0.5, y: -0.5, z: 0.50000006, w: 0.49999994}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Belly
+      parentName: Hips
+      position: {x: -4.5178417e-11, y: 0.014757737, z: 0}
+      rotation: {x: 0.000000041933152, y: 0.7071067, z: -0.000000041933138, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Chest
+      parentName: Belly
+      position: {x: -4.0960354e-18, y: 0.0073160795, z: -1.6833321e-11}
+      rotation: {x: 0.00000007989899, y: 0.00000022411452, z: 0.0036876102, w: 0.9999932}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Head
+      parentName: Chest
+      position: {x: 1.3579537e-12, y: 0.0041097635, z: -5.311812e-11}
+      rotation: {x: 0.006216452, y: 0.0004948269, z: -0.007827858, w: 0.99994993}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Head_end
+      parentName: Head
+      position: {x: 0, y: 0.010164591, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm.R
+      parentName: Belly
+      position: {x: -0.0095761055, y: 0.008152015, z: 0.00045125722}
+      rotation: {x: -0.08430505, y: -0.035349965, z: 0.99257267, w: 0.080265515}
+      scale: {x: 0.99999976, y: 0.99999994, z: 0.99999994}
+    - name: Hand.R
+      parentName: Arm.R
+      position: {x: -2.7939676e-10, y: 0.0039653075, z: 0}
+      rotation: {x: 0.11832808, y: -0.06449883, z: 0.12592305, w: 0.98284376}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: Hand.R_end
+      parentName: Hand.R
+      position: {x: 0, y: 0.003790582, z: 0}
+      rotation: {x: -0.05097662, y: -0.060654424, z: -0.26273283, w: 0.9616101}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm.L
+      parentName: Belly
+      position: {x: 0.0095761055, y: 0.008152015, z: 0.00045125268}
+      rotation: {x: 0.084305316, y: -0.03535024, z: 0.99257267, w: -0.08026559}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hand.L
+      parentName: Arm.L
+      position: {x: -6.519258e-11, y: 0.003965308, z: 0}
+      rotation: {x: 0.08581183, y: 0.10094224, z: -0.14050208, w: 0.9811759}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Hand.L_end
+      parentName: Hand.L
+      position: {x: 0, y: 0.003790584, z: 0}
+      rotation: {x: -0.12481814, y: 0.021412877, z: 0.26684538, w: 0.95538235}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg.R
+      parentName: Hips
+      position: {x: 0.00063592085, y: 0.0013216039, z: 0.007971987}
+      rotation: {x: 0.69026697, y: 0.15340129, z: 0.6902665, w: 0.15340073}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: foot.R
+      parentName: Leg.R
+      position: {x: 4.4703444e-10, y: 0.0019485372, z: -4.973799e-16}
+      rotation: {x: -0.00000029875318, y: -0.000000058069492, z: 0.18271972, w: 0.9831651}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: foot.R_end
+      parentName: foot.R
+      position: {x: 0, y: 0.0020408665, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg.L
+      parentName: Hips
+      position: {x: 0.00063592015, y: 0.0013216058, z: -0.007971987}
+      rotation: {x: 0.69026655, y: -0.15340096, z: 0.69026685, w: -0.15340114}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: foot.L
+      parentName: Leg.L
+      position: {x: 4.4703516e-10, y: 0.0019485393, z: 3.5527135e-16}
+      rotation: {x: -0.0000005079027, y: 0.00000016381908, z: -0.042906146, w: 0.9990791}
+      scale: {x: 1, y: 1, z: 1}
+    - name: foot.L_end
+      parentName: foot.L
+      position: {x: 0, y: 0.0020408668, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body3.001
+      parentName: hedgehog(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: eyes3.001
+      parentName: hedgehog(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: spikes3.001
+      parentName: hedgehog(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

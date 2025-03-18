@@ -4,13 +4,13 @@ namespace Assets.Scripts.Player
 {
     public class Player : MonoBehaviour
     {
-        public static Player Instace { get; private set; }
+        public static Player Instance { get; private set; }
 
         private void Awake()
         {
-            if (Instace == null)
+            if (Instance == null)
             {
-                Instace = this;
+                Instance = this;
             }
         }
     }

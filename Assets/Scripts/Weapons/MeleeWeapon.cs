@@ -12,7 +12,7 @@ namespace Assets.Scripts.Weapons
 
         public override void Attack()
         {
-            Transform playerTransform = Player.Player.Instace.transform;
+            Transform playerTransform = Player.Player.Instance.transform;
             Vector3 startPos = playerTransform.position + playerTransform.forward * BaseInfo.AttackOffset;
 
             float range = BaseInfo.AttackRange;
@@ -23,7 +23,7 @@ namespace Assets.Scripts.Weapons
             float angleStep = attackAngle / (rayCount - 1);
             float halfAngle = attackAngle / 2f;
 
-            Player.Player.Instace.TryGetComponent(out MeleeWeaponDebug debugger);
+            Player.Player.Instance.TryGetComponent(out MeleeWeaponDebug debugger);
 
             RaycastHit[] hits = new RaycastHit[] { };
 
