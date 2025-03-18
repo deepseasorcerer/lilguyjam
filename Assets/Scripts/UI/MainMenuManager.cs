@@ -1,6 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class MenuManager : MonoBehaviour
 {
@@ -43,4 +43,3 @@ public class MenuManager : MonoBehaviour
         }
     }
 }
-
