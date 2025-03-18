@@ -413,6 +413,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1601133987404323981, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601133987404323981, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[0].Input.InputAction
+      value: 
+      objectReference: {fileID: -5630151704836100654, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    - target: {fileID: 1601133987404323981, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[1].Input.InputAction
+      value: 
+      objectReference: {fileID: -5630151704836100654, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    - target: {fileID: 1601133987404323981, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[2].Input.InputAction
+      value: 
+      objectReference: {fileID: -3639576301809695312, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     - target: {fileID: 2832415034012665171, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
       propertyPath: _startWeapon
       value: 
