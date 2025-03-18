@@ -1,4 +1,5 @@
 using Assets.Scripts.Debugs;
+using Assets.Scripts.Enemies;
 using System.Linq;
 using UnityEngine;
 
@@ -45,7 +46,10 @@ namespace Assets.Scripts.Weapons
 
             foreach (RaycastHit hit in uniqueHits)
             {
-                Debug.Log($"[MLWPN] Hit {hit.collider.name} for {damage}");
+                if (hit.collider.gameObject.TryGetComponent(out EnemyHealth enemy))
+                {
+                    enemy.TakeDamage(damage);
+                }
             }
         }
     }
