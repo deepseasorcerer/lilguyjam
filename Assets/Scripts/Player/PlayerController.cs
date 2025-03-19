@@ -29,6 +29,10 @@ namespace Assets.Scripts.Player
         private float _targetAngle;
         private bool _isGrounded;
 
+        [Header("Animator Ref")]
+        [SerializeField] private Animator animator;
+
+
         private void Awake()
         {
             _input = new PlayerInput();
@@ -68,9 +72,17 @@ namespace Assets.Scripts.Player
 
             if (moveDirection.magnitude >= 0.1f)
             {
+                animator.ResetTrigger("IsIdle");
+                animator.SetTrigger("IsWalking");
                 MoveCharacter();
                 RotateCharacter(moveDirection);
             }
+            else
+            {
+                animator.ResetTrigger("IsWalking");
+                animator.SetTrigger("IsIdle");
+            }
+            
 
             IsGrounded();
             ApplyGravity();
