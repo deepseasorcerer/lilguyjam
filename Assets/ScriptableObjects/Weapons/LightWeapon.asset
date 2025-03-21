@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51036c0b0e034f44295b36b9a611b47e, type: 3}
   m_Name: LightWeapon
   m_EditorClassIdentifier: 
-  WeaponModel: {fileID: 8274899204876149367, guid: b42d92b866ee04b469f60705a455feb1, type: 3}
+  WeaponModel: {fileID: 4707099539302809637, guid: d6fefc540787ed749ab4d2ab428f2401, type: 3}
   Damage: 5
   AttackSpeed: 2
   AttackRange: 2

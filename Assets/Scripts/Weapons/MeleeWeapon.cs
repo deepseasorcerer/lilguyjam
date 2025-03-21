@@ -46,7 +46,7 @@ namespace Assets.Scripts.Weapons
 
             foreach (RaycastHit hit in uniqueHits)
             {
-                if (hit.collider.gameObject.TryGetComponent(out EnemyHealth enemy))
+                if (hit.collider.gameObject.TryGetComponent(out Enemy enemy))
                 {
                     enemy.TakeDamage(damage);
                 }

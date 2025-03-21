@@ -1,64 +1,70 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+namespace Assets.Scripts.Enemies
 {
-    public float MaxHealth;
-    public Transform target;
-    public Vector3 destination;
-    public State state;
-    public enum State
+    public class Enemy : MonoBehaviour
     {
-        Idle,
-        Moving
-    }
-
-    private float currentHealth;
-
-    private void Awake()
-    {
-        currentHealth = MaxHealth;
-    }
-
-    public void TakeDamage(float amount)
-    {
-        currentHealth -= amount;
-
-        CheckIfDead();
-    }
-
-    private void CheckIfDead()
-    {
-        if (currentHealth > 0)
-            return;
-
-        EnemyDied();
-    }
-
-    //Handle everything related to the death of an enemy
-    private void EnemyDied()
-    {
-        Debug.Log($"Enemy died");
-        gameObject.SetActive(false);
-    }
-
-    protected Vector3 GetDestination(int distance)
-    {
-        Vector3 vector = transform.position - target.position;
-        return target.position + (vector.normalized * distance);
-    }
-
-    private void Update() {
-        AIUpdate();
-        if (state.Equals(State.Moving))
+        public float MaxHealth;
+        public Transform target;
+        public Vector3 destination;
+        public State state;
+        public enum State
         {
-            NavMeshAgent agent = GetComponent<NavMeshAgent>();
-            agent.destination = destination; 
+            Idle,
+            Moving
         }
-    }
 
-    protected virtual void AIUpdate()
-    {
+        [SerializeField] private float exp;
+        private float currentHealth;
 
+        private void Awake()
+        {
+            currentHealth = MaxHealth;
+        }
+
+        public void TakeDamage(float amount)
+        {
+            currentHealth -= amount;
+
+            CheckIfDead();
+        }
+
+        private void CheckIfDead()
+        {
+            if (currentHealth > 0)
+                return;
+
+            EnemyDied();
+        }
+
+        //Handle everything related to the death of an enemy
+        private void EnemyDied()
+        {
+            Debug.Log($"Enemy died");
+            EnemyManager.Instance.TriggerOnEnemyDeath(exp);
+            gameObject.SetActive(false);
+        }
+
+        protected Vector3 GetDestination(int distance)
+        {
+            Vector3 vector = transform.position - target.position;
+            return target.position + (vector.normalized * distance);
+        }
+
+        private void Update()
+        {
+            AIUpdate();
+            if (state.Equals(State.Moving))
+            {
+                NavMeshAgent agent = GetComponent<NavMeshAgent>();
+                agent.destination = destination;
+            }
+        }
+
+        protected virtual void AIUpdate()
+        {
+
+        }
     }
 }
