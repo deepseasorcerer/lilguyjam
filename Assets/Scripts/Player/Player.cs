@@ -26,6 +26,11 @@ namespace Assets.Scripts.Player
             EnemyManager.Instance.OnEnemyDeath += OnEnemyDeath;
         }
 
+        private void OnEnemyDeath(object sender, EnemyManager.OnEnemyDeathEventArgs enemy)
+        {
+            GainExp(enemy.Exp);
+        }
+
         private void InitializePlayer()
         {
             Level = 1;
@@ -33,14 +38,10 @@ namespace Assets.Scripts.Player
             CalculateExpToNextLevel();
         }
 
+        #region PlayerExp
         private void CalculateExpToNextLevel()
         {
             ExpNeededToLevelUp = Level * 2.6f;
-        }
-
-        private void OnEnemyDeath(object sender, EnemyManager.OnEnemyDeathEventArgs enemy)
-        {
-            GainExp(enemy.Exp);
         }
 
         private void GainExp(float amount)
@@ -68,5 +69,6 @@ namespace Assets.Scripts.Player
 
         private void ResetCurrentExp() => CurrentExp = GetExpOverhead();
         private float GetExpOverhead() => CurrentExp - ExpNeededToLevelUp;
+        #endregion
     }
 }
