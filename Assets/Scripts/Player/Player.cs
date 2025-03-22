@@ -18,6 +18,7 @@ namespace Assets.Scripts.Player
         [SerializeField] private float _baseRunSpeed;
 
         [Header("Upgrade Values")]
+        [SerializeField] private int _upgradePointsPerLevel;
         [SerializeField] private float _maxHealthBonus;
         [SerializeField] private float _moveSpeedBonus;
 
@@ -93,7 +94,7 @@ namespace Assets.Scripts.Player
         private void LevelUp()
         {
             Level++;
-            UpgradePoints++;
+            UpgradePoints += _upgradePointsPerLevel;
 
             ResetCurrentExp();
             CalculateExpToNextLevel();
