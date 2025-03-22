@@ -20,5 +20,7 @@ namespace Assets.Scripts
         public int RayCount = 25;
         [Tooltip("How far away from the player should the attack start, base is 0.5")]
         public float AttackOffset = 0.5f;
+        [Tooltip("Amount of damage to add on each weapon upgrade")]
+        public float DamageUpgrade;
     }
 }

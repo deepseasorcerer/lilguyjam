@@ -19,3 +19,4 @@ MonoBehaviour:
   AttackAngle: 45
   RayCount: 25
   AttackOffset: 0.5
+  DamageUpgrade: 3

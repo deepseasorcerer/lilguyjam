@@ -8,10 +8,6 @@ namespace Assets.Scripts.Player
         [Header("References")]
         [SerializeField] private Transform _groundCheck;
 
-        [Header("Movement settings")]
-        [SerializeField] private float _walkSpeed = 3f;
-        [SerializeField] private float _runSpeed = 6.5f;
-
         [Header("Jump settings")]
         [SerializeField] private float _jumpHeight = 1f;
         [SerializeField] private float _turnSmoothTime = 0.1f;
@@ -28,6 +24,7 @@ namespace Assets.Scripts.Player
         private float _turnSmoothVelocity;
         private float _targetAngle;
         private bool _isGrounded;
+        private float _walkSpeed;
 
         [Header("Animator Ref")]
         [SerializeField] private Animator animator;
@@ -48,6 +45,8 @@ namespace Assets.Scripts.Player
             _input.Player.Move.canceled += PlayerInput_Move;
             _input.Player.Jump.performed += PlayerInput_Jump;
             _input.Player.Attack.performed += PlayerInput_Attack;
+
+            UpdateMoveSpeed();
         }
 
         private void PlayerInput_Move(InputAction.CallbackContext obj)
@@ -82,10 +81,15 @@ namespace Assets.Scripts.Player
                 animator.ResetTrigger("IsWalking");
                 animator.SetTrigger("IsIdle");
             }
-            
+
 
             IsGrounded();
             ApplyGravity();
+        }
+
+        public void UpdateMoveSpeed()
+        {
+            _walkSpeed = Player.Instance.WalkSpeed;
         }
 
         private void MoveCharacter()

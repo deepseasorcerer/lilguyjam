@@ -7,8 +7,10 @@ namespace Assets.Scripts.Weapons
 {
     public class MeleeWeapon : AWeapon<WeaponSO>
     {
+        private float damage;
         public MeleeWeapon(WeaponSO info) : base(info)
         {
+            damage = info.Damage;
         }
 
         public override void Attack()
@@ -17,7 +19,6 @@ namespace Assets.Scripts.Weapons
             Vector3 startPos = playerTransform.position + playerTransform.forward * BaseInfo.AttackOffset;
 
             float range = BaseInfo.AttackRange;
-            float damage = BaseInfo.Damage;
             float attackAngle = BaseInfo.AttackAngle;
             int rayCount = BaseInfo.RayCount;
 
@@ -48,9 +49,15 @@ namespace Assets.Scripts.Weapons
             {
                 if (hit.collider.gameObject.TryGetComponent(out Enemy enemy))
                 {
+                    Debug.Log($"[MLWPN] Dealt {damage} damage");
                     enemy.TakeDamage(damage);
                 }
             }
+        }
+
+        public override void Upgrade()
+        {
+            damage += BaseInfo.DamageUpgrade;
         }
     }
 }

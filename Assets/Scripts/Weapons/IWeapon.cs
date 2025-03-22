@@ -4,5 +4,6 @@ namespace Assets.Scripts.Weapons
     {
         public WeaponSO BaseInfo { get; }
         public void Attack();
+        public void Upgrade();
     }
 }
