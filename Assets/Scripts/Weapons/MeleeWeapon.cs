@@ -1,5 +1,7 @@
 using Assets.Scripts.Debugs;
 using Assets.Scripts.Enemies;
+using NUnit.Framework;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -27,7 +29,7 @@ namespace Assets.Scripts.Weapons
 
             Player.Player.Instance.TryGetComponent(out MeleeWeaponDebug debugger);
 
-            RaycastHit[] hits = new RaycastHit[] { };
+            List<RaycastHit> hits = new();
 
             for (int i = 0; i < rayCount; i++)
             {
@@ -40,7 +42,7 @@ namespace Assets.Scripts.Weapons
                     debugger.DrawRayDebug(startPos, rayDirection, range);
                 }
 
-                hits = Physics.RaycastAll(startPos, rayDirection, range);
+                hits.AddRange(Physics.RaycastAll(startPos, rayDirection, range));
             }
 
             RaycastHit[] uniqueHits = hits.GroupBy(hit => hit.colliderInstanceID).Select(group => group.First()).ToArray();

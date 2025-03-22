@@ -609,6 +609,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2269911843481085457, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.167926
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269911843481085457, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.0174446
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269911843481085457, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.93771696
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269911843481085457, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.3474003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269911843481085457, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000039521815
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269911843481085457, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000014641826
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063499760686385155, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: RadialAxis.Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063499760686385155, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: Orbits.Top.Height
+      value: 6.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063499760686385155, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: Orbits.Top.Radius
+      value: 3.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063499760686385155, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: VerticalAxis.Value
+      value: 23.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063499760686385155, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: Orbits.Center.Height
+      value: 4.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063499760686385155, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
+      propertyPath: Orbits.Center.Radius
+      value: 6.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5170344043543005362, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
       propertyPath: fillImage
       value: 
@@ -647,7 +695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8615873262424131297, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
       propertyPath: _baseRunSpeed
-      value: 6.5
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 8615873262424131297, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
       propertyPath: _baseMaxHealth
@@ -655,7 +703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8615873262424131297, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
       propertyPath: _baseWalkSpeed
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8615873262424131297, guid: e4ec57f109a696b4a95e1a18685b2162, type: 3}
       propertyPath: _maxHealthBonus
@@ -2462,8 +2510,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499486469}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22975296, y: 0.0000000117339924, z: -0.0000000027700202, w: 0.973249}
-  m_LocalPosition: {x: 0, y: 3.2, z: -4}
+  m_LocalRotation: {x: 0.34740034, y: -0.000000039521815, z: 0.000000014641831, w: 0.9377169}
+  m_LocalPosition: {x: 0, y: 6.3679256, z: -6.0174446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2972,10 +3020,6 @@ PrefabInstance:
     - target: {fileID: 8154210009643590460, guid: 15d7ddd7b467683429dd23ee4ec980a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8648340550247545491, guid: 15d7ddd7b467683429dd23ee4ec980a7, type: 3}
-      propertyPath: exp
-      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8818684007174502790, guid: 15d7ddd7b467683429dd23ee4ec980a7, type: 3}
       propertyPath: m_Name

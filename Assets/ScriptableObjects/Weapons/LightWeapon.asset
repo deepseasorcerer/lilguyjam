@@ -15,8 +15,8 @@ MonoBehaviour:
   WeaponModel: {fileID: 4707099539302809637, guid: d6fefc540787ed749ab4d2ab428f2401, type: 3}
   Damage: 5
   AttackSpeed: 2
-  AttackRange: 2
-  AttackAngle: 45
+  AttackRange: 3
+  AttackAngle: 65
   RayCount: 25
   AttackOffset: 0.5
   DamageUpgrade: 3
