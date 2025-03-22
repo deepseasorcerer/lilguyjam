@@ -6,7 +6,7 @@ namespace Assets.Scripts
     {
         private void Start()
         {
-            //Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }
