@@ -10,6 +10,7 @@ namespace Assets.Scripts.Player
         public int Level { get; private set; }
         public float CurrentExp { get; private set; }
         public float ExpNeededToLevelUp { get; private set; }
+        public int UpgradePoints { get; private set; }
 
         [Header("Base Stats")]
         [SerializeField] private float _baseMaxHealth;
@@ -92,6 +93,7 @@ namespace Assets.Scripts.Player
         private void LevelUp()
         {
             Level++;
+            UpgradePoints++;
 
             ResetCurrentExp();
             CalculateExpToNextLevel();
@@ -105,6 +107,9 @@ namespace Assets.Scripts.Player
         #region PlayerUpgrades
         public void UpgradeMaxHealth()
         {
+            if (!CanSpendUpgradePoint())
+                return;
+
             MaxHealthLevel++;
             _maxHealth += _maxHealthBonus;
             healthBar.UpdateMaxHealth();
@@ -112,10 +117,22 @@ namespace Assets.Scripts.Player
 
         public void UpgradeMoveSpeed()
         {
+            if (!CanSpendUpgradePoint())
+                return;
+
             MoveSpeedLevel++;
             _walkSpeed += _moveSpeedBonus;
             _runSpeed += _moveSpeedBonus;
             controller.UpdateMoveSpeed();
+        }
+
+        public bool CanSpendUpgradePoint()
+        {
+            if (UpgradePoints <= 0)
+                return false;
+
+            UpgradePoints--;
+            return true;
         }
         #endregion
     }

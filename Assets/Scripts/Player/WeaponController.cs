@@ -56,6 +56,9 @@ namespace Assets.Scripts.Player
 
         public void UpgradeWeaponDamage()
         {
+            if (!Player.Instance.CanSpendUpgradePoint())
+                return;
+
             CurrentWeapon.Upgrade();
         }
     }
