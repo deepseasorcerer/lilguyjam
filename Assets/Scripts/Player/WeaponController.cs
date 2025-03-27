@@ -53,5 +53,13 @@ namespace Assets.Scripts.Player
             yield return new WaitForSeconds(1f / _currentWeapon.BaseInfo.AttackSpeed);
             _canAttack = true;
         }
+
+        public void UpgradeWeaponDamage()
+        {
+            if (!Player.Instance.CanSpendUpgradePoint())
+                return;
+
+            CurrentWeapon.Upgrade();
+        }
     }
 }

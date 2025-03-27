@@ -17,5 +17,10 @@ namespace Assets.Scripts.Weapons
         {
             Debug.Log($"[AWPN] Attacking");
         }
+
+        public virtual void Upgrade()
+        {
+            Debug.Log($"[AWPN] Upgraded");
+        }
     }
 }

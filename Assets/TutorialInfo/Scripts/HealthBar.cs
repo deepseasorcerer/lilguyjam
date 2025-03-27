@@ -1,7 +1,8 @@
+using Assets.Scripts.Player;
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System.Collections;
 
 public class HealthBar : MonoBehaviour
 {
@@ -12,48 +13,56 @@ public class HealthBar : MonoBehaviour
     public TextMeshProUGUI currentHealthText;
     public TextMeshProUGUI maxHealthText;
 
-    [Header ("Effects")]
+    [Header("Effects")]
     public Animator damageAnimator;
     public RectTransform healthBarTransform;
     private Vector3 originalScale; // Store the original scale of the health bar
 
     private bool useFirstAnimation = true; //Tracks which animation to play
 
-    [Header("Player Health Settings")]
-    public float maxHealth = 100f;
     private float currentHealth;
 
     void Start()
     {
-        currentHealth = maxHealth;
-        healthSlider.maxValue = maxHealth;
-        healthSlider.value = maxHealth;
+        float startHealth = Player.Instance.MaxHealth;
+
+        currentHealth = startHealth;
+        healthSlider.value = startHealth;
         originalScale = healthBarTransform.localScale; //For health bar animation
+
+        UpdateMaxHealth();
         UpdateHealthBar();
     }
 
-/*------THEALTH BAR TESTER--------
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) // Press "1" to take damage
+    /*------THEALTH BAR TESTER--------
+        void Update()
         {
-           TakeDamage(10f); // Adjust damage amount as needed
+            if (Input.GetKeyDown(KeyCode.Alpha1)) // Press "1" to take damage
+            {
+               TakeDamage(10f); // Adjust damage amount as needed
+            }
         }
-    }
-*/
+    */
 
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        currentHealth = Mathf.Clamp(currentHealth, 0, Player.Instance.MaxHealth);
         UpdateHealthBar();
     }
 
     public void Heal(float amount)
     {
         currentHealth += amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        currentHealth = Mathf.Clamp(currentHealth, 0, Player.Instance.MaxHealth);
         UpdateHealthBar();
+    }
+
+    public void UpdateMaxHealth()
+    {
+        healthSlider.maxValue = Player.Instance.MaxHealth;
+        maxHealthText.text = $"/{Player.Instance.MaxHealth}";
+        fillImage.color = healthGradient.Evaluate(healthSlider.normalizedValue);
     }
 
     private void UpdateHealthBar()
@@ -61,12 +70,12 @@ public class HealthBar : MonoBehaviour
         healthSlider.value = currentHealth;
         fillImage.color = healthGradient.Evaluate(healthSlider.normalizedValue);
         DamageEffect();
-        maxHealthText.text = $"/{maxHealth}";
+        maxHealthText.text = $"/{Player.Instance.MaxHealth}";
         currentHealthText.text = $"{currentHealth}";
     }
 
     private void DamageEffect()
-    {   
+    {
         //----DAMAGE SLASH ANIMATION-----
         if (damageAnimator != null)
         {
@@ -76,7 +85,7 @@ public class HealthBar : MonoBehaviour
 
             if (useFirstAnimation)
             {
-                damageAnimator.SetTrigger("TakeDamage1"); 
+                damageAnimator.SetTrigger("TakeDamage1");
             }
             else
             {
@@ -99,5 +108,4 @@ public class HealthBar : MonoBehaviour
                 LeanTween.scale(healthBarTransform, originalScale, duration).setEaseInOutQuad();
             });
     }
-    
 }

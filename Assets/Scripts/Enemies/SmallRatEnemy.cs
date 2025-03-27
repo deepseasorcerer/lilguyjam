@@ -1,10 +1,11 @@
-using UnityEngine;
-
-public class SmallRatEnemy : Enemy
+namespace Assets.Scripts.Enemies
 {
-    protected override void AIUpdate()
+    public class SmallRatEnemy : Enemy
     {
-        destination = GetDestination(5);
-        state = State.Moving;
+        protected override void AIUpdate()
+        {
+            destination = GetDestination(5);
+            state = State.Moving;
+        }
     }
 }
